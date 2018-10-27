@@ -1,0 +1,5 @@
+**/.DS_Store
+**/xcuserdata/*
+/TVDBKit/Carthage
+**/secrets.xcconfig
+.env
