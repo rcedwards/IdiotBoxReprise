@@ -12,8 +12,8 @@ extension AuthenticationAPI {
         do {
             let data = try JSONEncoder().encode(loginInfo)
             return httpClient.post(endpointURL, withBody: data).then { data in
-                print("Data \(data)")
-                return Promise(Token(value: "test"))
+                let decoder = JSONDecoder()
+                return Promise(try decoder.decode(Token.self, from: data))
             }
         } catch {
             return Promise<Token>(error)

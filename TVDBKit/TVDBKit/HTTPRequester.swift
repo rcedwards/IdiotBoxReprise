@@ -45,7 +45,10 @@ extension HTTPRequester {
     private func sendRequest(_ url: URL, requestType: HTTP.RequestType, body: Data? = nil) -> Promise<Data> {
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
-        request.httpBody = body
+        if let bodyData = body {
+            request.httpBody = bodyData
+            request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        }
 
         return Promise<Data> { fullfill, reject in
             let task = self.session.dataTask(with: request) { (maybeData, maybeResponse, maybeError) in

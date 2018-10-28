@@ -3,7 +3,11 @@ import Foundation
 class HTTPClient: HTTPRequester {
     let baseAddress: URL
     lazy var session: URLSession = {
-        return URLSession(configuration: .default)
+        let config = URLSessionConfiguration.default
+        config.httpAdditionalHeaders = [
+            "Accept": "application/json; charset=utf-8"
+        ]
+        return URLSession(configuration: config)
     }()
 
     init(baseAddress: URL) {
