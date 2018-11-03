@@ -3,18 +3,20 @@ import Promises
 
 protocol AuthenticationAPI {
     var httpClient: HTTPRequester { get }
-    func aquireToken(withLogin loginInfo: Login) -> Token?
+    func aquireToken(withLogin loginInfo: Login) -> Promise<Token>
 }
 
 extension AuthenticationAPI {
-    func aquireToken(withLogin loginInfo: Login) -> Token? {
+    func aquireToken(withLogin loginInfo: Login) -> Promise<Token> {
         let endpointURL = httpClient.baseAddress.withEndpoint(AuthenticationEndpoint.login)
         do {
             let data = try JSONEncoder().encode(loginInfo)
-            let result = httpClient.post(endpointURL, withBody: data)
-            return nil
+            return httpClient.post(endpointURL, withBody: data).then { data in
+                print("Data \(data)")
+                return Promise(Token(value: "test"))
+            }
         } catch {
-            return nil
+            return Promise<Token>(error)
         }
     }
 }

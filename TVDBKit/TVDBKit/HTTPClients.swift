@@ -3,7 +3,7 @@ import Foundation
 class HTTPClient: HTTPRequester {
     let baseAddress: URL
     lazy var session: URLSession = {
-        return URLSession(configuration: URLSessionConfiguration())
+        return URLSession(configuration: .default)
     }()
 
     init(baseAddress: URL) {

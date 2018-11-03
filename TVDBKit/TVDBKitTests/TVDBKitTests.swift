@@ -20,11 +20,17 @@ class TVDBKitTests: XCTestCase {
     }
 
     func testExample() {
+        let callbackExpectation = expectation(description: "Async")
         let baseAddress = URL(string: "https://api.thetvdb.com")!
         let httpClient = HTTPClient(baseAddress: baseAddress)
         let authAPI = AuthenticationAPIService(httpClient: httpClient)
-        let login = LoginInfo()
-        authAPI.aquireToken(withLogin: login)
+        let login = Login()
+
+        authAPI.aquireToken(withLogin: login).then {
+            print($0)
+            callbackExpectation.fulfill()
+        }
+
         waitForExpectations(timeout: 200, handler: nil)
     }
 

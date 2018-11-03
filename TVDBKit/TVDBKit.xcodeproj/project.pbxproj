@@ -10,8 +10,10 @@
 		5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */; };
 		5B4367C62183B30B005FAA50 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C52183B30B005FAA50 /* Login.swift */; };
 		5B4367D62183D2EF005FAA50 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
-		5B4367D92184160C005FAA50 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367D72184160C005FAA50 /* FBLPromises.framework */; };
-		5B4367DA2184160C005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367D82184160C005FAA50 /* Promises.framework */; };
+		5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
+		5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
+		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
+		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF349932170FBAB001B4168 /* TVDBKit.framework */; };
 		5BF349A22170FBAB001B4168 /* TVDBKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* TVDBKitTests.swift */; };
 		5BF349A42170FBAB001B4168 /* TVDBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF349962170FBAB001B4168 /* TVDBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,8 +36,8 @@
 		5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		5B4367C52183B30B005FAA50 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		5B4367D52183D2EF005FAA50 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		5B4367D72184160C005FAA50 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = "<group>"; };
-		5B4367D82184160C005FAA50 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Promises.framework; sourceTree = "<group>"; };
+		5B4367DC21841893005FAA50 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
+		5B4367DD21841893005FAA50 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
 		5BF349932170FBAB001B4168 /* TVDBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TVDBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF349962170FBAB001B4168 /* TVDBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVDBKit.h; sourceTree = "<group>"; };
 		5BF349972170FBAB001B4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4367DA2184160C005FAA50 /* Promises.framework in Frameworks */,
-				5B4367D92184160C005FAA50 /* FBLPromises.framework in Frameworks */,
+				5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */,
+				5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,27 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */,
 				5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */,
+				5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B4367CB2183BB16005FAA50 /* Dependencies */ = {
+		5B4367DB2184187C005FAA50 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				5B4367D72184160C005FAA50 /* FBLPromises.framework */,
-				5B4367D82184160C005FAA50 /* Promises.framework */,
+				5B4367DC21841893005FAA50 /* FBLPromises.framework */,
+				5B4367DD21841893005FAA50 /* Promises.framework */,
 			);
 			name = Dependencies;
-			path = Carthage/Build/iOS;
 			sourceTree = "<group>";
 		};
 		5BF349892170FBAB001B4168 = {
 			isa = PBXGroup;
 			children = (
-				5B4367CB2183BB16005FAA50 /* Dependencies */,
+				5B4367DB2184187C005FAA50 /* Dependencies */,
 				5BF349952170FBAB001B4168 /* TVDBKit */,
 				5BF349A02170FBAB001B4168 /* TVDBKitTests */,
 				5BF349942170FBAB001B4168 /* Products */,
@@ -143,7 +146,7 @@
 				5BF3498F2170FBAB001B4168 /* Sources */,
 				5BF349902170FBAB001B4168 /* Frameworks */,
 				5BF349912170FBAB001B4168 /* Resources */,
-				5B4367CC2183BBD0005FAA50 /* ShellScript */,
+				5B4367CC2183BBD0005FAA50 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -161,6 +164,7 @@
 				5BF349982170FBAB001B4168 /* Sources */,
 				5BF349992170FBAB001B4168 /* Frameworks */,
 				5BF3499A2170FBAB001B4168 /* Resources */,
+				5BDF9D492184245600AC1CE2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -227,7 +231,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5B4367CC2183BBD0005FAA50 /* ShellScript */ = {
+		5B4367CC2183BBD0005FAA50 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,11 +242,34 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FBLPromises.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Promises.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Promises.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBLPromises.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		5BDF9D492184245600AC1CE2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FBLPromises.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Promises.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBLPromises.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Promises.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,6 +498,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TVDBKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -489,6 +520,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TVDBKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
