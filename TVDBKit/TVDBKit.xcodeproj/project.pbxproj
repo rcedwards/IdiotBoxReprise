@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */; };
 		5B4367C62183B30B005FAA50 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C52183B30B005FAA50 /* Login.swift */; };
-		5B4367D62183D2EF005FAA50 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
 		5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
 		5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
+		5B8CF331218DE872006A2D30 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
+		5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */; };
 		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
 		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF349932170FBAB001B4168 /* TVDBKit.framework */; };
-		5BF349A22170FBAB001B4168 /* TVDBKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* TVDBKitTests.swift */; };
 		5BF349A42170FBAB001B4168 /* TVDBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF349962170FBAB001B4168 /* TVDBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AD2170FBDA001B4168 /* Endpoint.swift */; };
 		5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */; };
@@ -42,8 +42,8 @@
 		5BF349962170FBAB001B4168 /* TVDBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVDBKit.h; sourceTree = "<group>"; };
 		5BF349972170FBAB001B4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF3499C2170FBAB001B4168 /* TVDBKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVDBKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF349A12170FBAB001B4168 /* TVDBKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDBKitTests.swift; sourceTree = "<group>"; };
-		5BF349A32170FBAB001B4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		5BF349A32170FBAB001B4168 /* Tests_Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tests_Info.plist; sourceTree = "<group>"; };
 		5BF349AD2170FBDA001B4168 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequester.swift; sourceTree = "<group>"; };
 		5BF349B12170FC05001B4168 /* HTTPClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClients.swift; sourceTree = "<group>"; };
@@ -81,12 +81,42 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
+		5B45B63B218DE689008F0ACB /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5B4367C52183B30B005FAA50 /* Login.swift */,
+				5B4367D52183D2EF005FAA50 /* Token.swift */,
+				5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */,
+				5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5B8CF32F218DE715006A2D30 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BF349A32170FBAB001B4168 /* Tests_Info.plist */,
+				5BF349972170FBAB001B4168 /* Info.plist */,
+				5BF349962170FBAB001B4168 /* TVDBKit.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B8CF330218DE75D006A2D30 /* Base Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BF349AD2170FBDA001B4168 /* Endpoint.swift */,
+				5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */,
+				5BF349B12170FC05001B4168 /* HTTPClients.swift */,
+			);
+			path = "Base Components";
+			sourceTree = "<group>";
+		};
 		5BF349892170FBAB001B4168 = {
 			isa = PBXGroup;
 			children = (
 				5B4367DB2184187C005FAA50 /* Dependencies */,
 				5BF349952170FBAB001B4168 /* TVDBKit */,
-				5BF349A02170FBAB001B4168 /* TVDBKitTests */,
 				5BF349942170FBAB001B4168 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,25 +133,11 @@
 		5BF349952170FBAB001B4168 /* TVDBKit */ = {
 			isa = PBXGroup;
 			children = (
-				5BF349962170FBAB001B4168 /* TVDBKit.h */,
-				5BF349972170FBAB001B4168 /* Info.plist */,
-				5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */,
-				5BF349AD2170FBDA001B4168 /* Endpoint.swift */,
-				5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */,
-				5BF349B12170FC05001B4168 /* HTTPClients.swift */,
-				5B4367C52183B30B005FAA50 /* Login.swift */,
-				5B4367D52183D2EF005FAA50 /* Token.swift */,
+				5B8CF330218DE75D006A2D30 /* Base Components */,
+				5B45B63B218DE689008F0ACB /* Authentication */,
+				5B8CF32F218DE715006A2D30 /* Resources */,
 			);
 			path = TVDBKit;
-			sourceTree = "<group>";
-		};
-		5BF349A02170FBAB001B4168 /* TVDBKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				5BF349A12170FBAB001B4168 /* TVDBKitTests.swift */,
-				5BF349A32170FBAB001B4168 /* Info.plist */,
-			);
-			path = TVDBKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +301,7 @@
 				5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */,
 				5BF349B22170FC05001B4168 /* HTTPClients.swift in Sources */,
 				5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */,
-				5B4367D62183D2EF005FAA50 /* Token.swift in Sources */,
+				5B8CF331218DE872006A2D30 /* Token.swift in Sources */,
 				5B4367C62183B30B005FAA50 /* Login.swift in Sources */,
 				5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */,
 			);
@@ -295,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF349A22170FBAB001B4168 /* TVDBKitTests.swift in Sources */,
+				5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +463,7 @@
 					"$(PROJECT_DIR)/TVDBKit",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TVDBKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVDBKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,7 +494,7 @@
 					"$(PROJECT_DIR)/TVDBKit",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TVDBKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVDBKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,7 +518,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TVDBKitTests/Info.plist;
+				INFOPLIST_FILE = TVDBKit/Resources/Tests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,7 +540,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TVDBKitTests/Info.plist;
+				INFOPLIST_FILE = TVDBKit/Resources/Tests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

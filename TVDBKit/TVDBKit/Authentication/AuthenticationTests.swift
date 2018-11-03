@@ -1,7 +1,7 @@
 import XCTest
 @testable import TVDBKit
 
-class TVDBKitTests: XCTestCase {
+class AuthenticationTests: XCTestCase {
 
     var authService: AuthenticationAPIService!
     let baseAddress = URL(string: "https://api.thetvdb.com")!
@@ -14,7 +14,7 @@ class TVDBKitTests: XCTestCase {
         authService = AuthenticationAPIService(httpClient: httpClient)
     }
 
-    func testAuthentication() {
+    func testTokenFetch() {
         let callbackExpectation = expectation(description: "Async")
         authService.aquireToken(withLogin: login)
             .then { _ in
@@ -27,7 +27,7 @@ class TVDBKitTests: XCTestCase {
         waitForExpectations(timeout: 2, handler: nil)
     }
 
-    func testRefresh() {
+    func testTokenRefresh() {
         let callbackExpectation = expectation(description: "Async")
         authService.aquireToken(withLogin: login).then {
             let authenticatedClient = AuthenticatedHTTPClient(baseAddress: self.baseAddress, token: $0)
