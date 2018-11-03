@@ -18,7 +18,9 @@ enum HTTP {
 
 protocol HTTPRequester {
     var baseAddress: URL { get }
-    var session: URLSession { get set }
+    var session: URLSession { get }
+
+    func url(forEndpoint endpoint: Endpoint) -> URL
 
     func get(_ url: URL) -> Promise<Data>
     func post(_ url: URL, withBody: Data) -> Promise<Data>
@@ -30,6 +32,10 @@ protocol AuthenticatedHTTPRequester {
 }
 
 extension HTTPRequester {
+    func url(forEndpoint endpoint: Endpoint) -> URL {
+        return baseAddress.forEndpoint(endpoint)
+    }
+
     func get(_ url: URL) -> Promise<Data> {
         return sendRequest(url, requestType: .GET)
     }

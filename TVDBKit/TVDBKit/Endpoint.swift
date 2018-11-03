@@ -6,7 +6,7 @@ protocol Endpoint {
 }
 
 extension URL {
-    func withEndpoint(_ endpoint: Endpoint) -> URL {
+    func forEndpoint(_ endpoint: Endpoint) -> URL {
         guard var components = URLComponents(url: self, resolvingAgainstBaseURL: true) else {
             preconditionFailure("Base URL is invalid: \(self)")
         }
