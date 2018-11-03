@@ -13,6 +13,8 @@
 		5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5B8CF331218DE872006A2D30 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
 		5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */; };
+		5B8CF335218DED46006A2D30 /* secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */; };
+		5B8CF342218DF0D0006A2D30 /* Bundle+TVDBKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */; };
 		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
 		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF349932170FBAB001B4168 /* TVDBKit.framework */; };
@@ -38,6 +40,8 @@
 		5B4367D52183D2EF005FAA50 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		5B4367DC21841893005FAA50 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
 		5B4367DD21841893005FAA50 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
+		5B8CF334218DED46006A2D30 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
+		5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TVDBKit.swift"; sourceTree = "<group>"; };
 		5BF349932170FBAB001B4168 /* TVDBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TVDBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF349962170FBAB001B4168 /* TVDBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVDBKit.h; sourceTree = "<group>"; };
 		5BF349972170FBAB001B4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				5BF349A32170FBAB001B4168 /* Tests_Info.plist */,
 				5BF349972170FBAB001B4168 /* Info.plist */,
 				5BF349962170FBAB001B4168 /* TVDBKit.h */,
+				5B8CF334218DED46006A2D30 /* secrets.xcconfig */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -110,6 +115,14 @@
 				5BF349B12170FC05001B4168 /* HTTPClients.swift */,
 			);
 			path = "Base Components";
+			sourceTree = "<group>";
+		};
+		5B8CF340218DF0B2006A2D30 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5BF349892170FBAB001B4168 = {
@@ -135,6 +148,7 @@
 			children = (
 				5B8CF330218DE75D006A2D30 /* Base Components */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
+				5B8CF340218DF0B2006A2D30 /* Extensions */,
 				5B8CF32F218DE715006A2D30 /* Resources */,
 			);
 			path = TVDBKit;
@@ -234,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8CF335218DED46006A2D30 /* secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8CF342218DF0D0006A2D30 /* Bundle+TVDBKit.swift in Sources */,
 				5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */,
 				5BF349B22170FC05001B4168 /* HTTPClients.swift in Sources */,
 				5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */,
@@ -450,6 +466,7 @@
 		};
 		5BF349A82170FBAB001B4168 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -481,6 +498,7 @@
 		};
 		5BF349A92170FBAB001B4168 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
