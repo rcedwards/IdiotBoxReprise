@@ -42,4 +42,3 @@ curl \
  -X POST \
  --data-binary "$DATA_FILE" \
  'https://api.thetvdb.com/login'
-
