@@ -4,7 +4,7 @@ import XCTest
 class AuthenticationTests: XCTestCase {
 
     var authService: AuthenticationAPIService!
-    let baseAddress = URL(string: "https://api.thetvdb.com")!
+    let baseAddress = Configuration.apiBaseURL
     let login = Login()
 
     override func setUp() {
