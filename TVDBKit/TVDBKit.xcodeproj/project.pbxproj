@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B281DC7218E3B520018EEEA /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B281DC6218E3B520018EEEA /* Series.swift */; };
 		5B281DCA218E47BD0018EEEA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B281DC9218E47BD0018EEEA /* Environment.swift */; };
 		5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */; };
 		5B4367C62183B30B005FAA50 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C52183B30B005FAA50 /* Login.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B281DC6218E3B520018EEEA /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		5B281DC9218E47BD0018EEEA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		5B4367C52183B30B005FAA50 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B281DC3218E3B190018EEEA /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				5B281DC6218E3B520018EEEA /* Series.swift */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
 		5B281DC8218E47A10018EEEA /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				5B281DC8218E47A10018EEEA /* Configuration */,
+				5B281DC3218E3B190018EEEA /* Series */,
 				5B8CF330218DE75D006A2D30 /* Base Components */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
 				5B8CF340218DF0B2006A2D30 /* Extensions */,
@@ -330,6 +341,7 @@
 				5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */,
 				5B8CF331218DE872006A2D30 /* Token.swift in Sources */,
 				5B4367C62183B30B005FAA50 /* Login.swift in Sources */,
+				5B281DC7218E3B520018EEEA /* Series.swift in Sources */,
 				5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */,
 				5B281DCA218E47BD0018EEEA /* Environment.swift in Sources */,
 			);
