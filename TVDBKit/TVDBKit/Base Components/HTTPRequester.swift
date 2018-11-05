@@ -27,7 +27,7 @@ protocol HTTPRequester {
     func patch(_ url: URL, withBody: Data) -> Promise<Data>
 }
 
-protocol AuthenticatedHTTPRequester {
+protocol AuthenticatedHTTPRequester: HTTPRequester {
     var token: Token { get }
 }
 
