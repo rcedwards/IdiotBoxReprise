@@ -2,7 +2,8 @@
 
 source ./load_env.sh
 
-set -x
+URL="login"
+VERB="POST"
 
 if [ -z "$API_KEY" ]
 then
@@ -36,9 +37,4 @@ DATA_FILE=$(sed "-e s/API_KEY/$API_KEY/g" "-e s/USER_KEY/$USER_KEY/g" "-e s/USER
 END
 )
 
-curl \
- --header 'Content-Type: application/json' \
- --header 'Accept: application/json' \
- -X POST \
- --data-binary "$DATA_FILE" \
- 'https://api.thetvdb.com/login'
+./base_curl.sh "$URL" "$VERB" "$DATA_FILE"

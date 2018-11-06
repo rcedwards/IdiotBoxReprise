@@ -1,7 +1,7 @@
 import Foundation
 
 struct Login: Codable {
-    fileprivate static let defaultAPIKey = Bundle.defaultAPIKey
+    fileprivate static let defaultAPIKey = Configuration.defaultAPIKey
 
     let username: String?
     let password: String?
@@ -17,15 +17,5 @@ struct Login: Codable {
         self.username = username
         self.password = password
         self.apiKey = apiKey
-    }
-}
-
-fileprivate extension Bundle {
-    static var defaultAPIKey: String {
-        guard let key = tvdbKitBundle.infoDictionary?["TVDB_API_KEY"] as? String,
-            !key.isEmpty else {
-                preconditionFailure("Missing value from secrets.xcconfig")
-        }
-        return key
     }
 }

@@ -1,9 +1,11 @@
 import Foundation
 import Promises
 
+// MARK: - API Contract
+
 protocol AuthenticationAPI {
     var httpClient: HTTPRequester { get }
-    var authenticatedHTTPClient: HTTPRequester? { get set }
+    var authenticatedHTTPClient: AuthenticatedHTTPRequester? { get set }
 
     func aquireToken(withLogin loginInfo: Login) -> Promise<Token>
     func refreshToken() -> Promise<Token>
@@ -25,7 +27,7 @@ extension AuthenticationAPI {
 
     func refreshToken() -> Promise<Token> {
         guard let authenticatedHTTPClient = authenticatedHTTPClient else {
-            return Promise(AuthenticationError.missingToken)
+            return Promise(AuthenticationError.missingAuthenticatedRequestor)
         }
         let endpoint = authenticatedHTTPClient.url(forEndpoint: AuthenticationEndpoint.refresh)
         return authenticatedHTTPClient.get(endpoint).then { data in
@@ -35,9 +37,13 @@ extension AuthenticationAPI {
     }
 }
 
+// MARK: - Errors
+
 public enum AuthenticationError: Error {
-    case missingToken
+    case missingAuthenticatedRequestor
 }
+
+// MARK: - Endpoints
 
 public enum AuthenticationEndpoint: Endpoint {
     case login
@@ -60,11 +66,13 @@ public enum AuthenticationEndpoint: Endpoint {
     }
 }
 
+// MARK: - Concrete Service
+
 class AuthenticationAPIService: AuthenticationAPI {
     let httpClient: HTTPRequester
-    var authenticatedHTTPClient: HTTPRequester?
+    var authenticatedHTTPClient: AuthenticatedHTTPRequester?
 
-    init(httpClient: HTTPRequester, authenticatedHTTPClient: HTTPRequester? = nil) {
+    init(httpClient: HTTPRequester, authenticatedHTTPClient: AuthenticatedHTTPRequester? = nil) {
         self.httpClient = httpClient
         self.authenticatedHTTPClient = authenticatedHTTPClient
     }
