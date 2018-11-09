@@ -11,6 +11,7 @@
 		5B281DC7218E3B520018EEEA /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B281DC6218E3B520018EEEA /* Series.swift */; };
 		5B281DCA218E47BD0018EEEA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B281DC9218E47BD0018EEEA /* Environment.swift */; };
 		5B281DD62190854D0018EEEA /* SeriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B281DD52190854D0018EEEA /* SeriesTests.swift */; };
+		5B2CBF742195DCC5009AB585 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CBF732195DCC5009AB585 /* EpisodeTests.swift */; };
 		5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */; };
 		5B4367C62183B30B005FAA50 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C52183B30B005FAA50 /* Login.swift */; };
 		5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
@@ -21,6 +22,9 @@
 		5B8CF342218DF0D0006A2D30 /* Bundle+TVDBKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */; };
 		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
 		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
+		5BE267532194CA4300EC9CB2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267522194CA4300EC9CB2 /* Episode.swift */; };
+		5BE267552194CA5100EC9CB2 /* EpisodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267542194CA5100EC9CB2 /* EpisodeAPI.swift */; };
+		5BE267572194CC0600EC9CB2 /* EpisodesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267562194CC0600EC9CB2 /* EpisodesCollection.swift */; };
 		5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF349932170FBAB001B4168 /* TVDBKit.framework */; };
 		5BF349A42170FBAB001B4168 /* TVDBKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BF349962170FBAB001B4168 /* TVDBKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AD2170FBDA001B4168 /* Endpoint.swift */; };
@@ -43,6 +47,7 @@
 		5B281DC6218E3B520018EEEA /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		5B281DC9218E47BD0018EEEA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B281DD52190854D0018EEEA /* SeriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTests.swift; sourceTree = "<group>"; };
+		5B2CBF732195DCC5009AB585 /* EpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
 		5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		5B4367C52183B30B005FAA50 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		5B4367D52183D2EF005FAA50 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		5B4367DD21841893005FAA50 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
 		5B8CF334218DED46006A2D30 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
 		5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TVDBKit.swift"; sourceTree = "<group>"; };
+		5BE267522194CA4300EC9CB2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		5BE267542194CA5100EC9CB2 /* EpisodeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeAPI.swift; sourceTree = "<group>"; };
+		5BE267562194CC0600EC9CB2 /* EpisodesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCollection.swift; sourceTree = "<group>"; };
 		5BF349932170FBAB001B4168 /* TVDBKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TVDBKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF349962170FBAB001B4168 /* TVDBKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVDBKit.h; sourceTree = "<group>"; };
 		5BF349972170FBAB001B4168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +159,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5BE2675121948CB400EC9CB2 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				5BE267522194CA4300EC9CB2 /* Episode.swift */,
+				5BE267542194CA5100EC9CB2 /* EpisodeAPI.swift */,
+				5BE267562194CC0600EC9CB2 /* EpisodesCollection.swift */,
+				5B2CBF732195DCC5009AB585 /* EpisodeTests.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
 		5BF349892170FBAB001B4168 = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				5B281DC8218E47A10018EEEA /* Configuration */,
-				5B281DC3218E3B190018EEEA /* Series */,
 				5B8CF330218DE75D006A2D30 /* Base Components */,
+				5BE2675121948CB400EC9CB2 /* Episodes */,
+				5B281DC3218E3B190018EEEA /* Series */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
 				5B8CF340218DF0B2006A2D30 /* Extensions */,
 				5B8CF32F218DE715006A2D30 /* Resources */,
@@ -346,11 +366,14 @@
 				5BF349B22170FC05001B4168 /* HTTPClients.swift in Sources */,
 				5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */,
 				5B8CF331218DE872006A2D30 /* Token.swift in Sources */,
+				5BE267532194CA4300EC9CB2 /* Episode.swift in Sources */,
+				5BE267552194CA5100EC9CB2 /* EpisodeAPI.swift in Sources */,
 				5B4367C62183B30B005FAA50 /* Login.swift in Sources */,
 				5B281DC7218E3B520018EEEA /* Series.swift in Sources */,
 				5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */,
 				5B281DC5218E3B370018EEEA /* SeriesAPI.swift in Sources */,
 				5B281DCA218E47BD0018EEEA /* Environment.swift in Sources */,
+				5BE267572194CC0600EC9CB2 /* EpisodesCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +383,7 @@
 			files = (
 				5B281DD62190854D0018EEEA /* SeriesTests.swift in Sources */,
 				5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */,
+				5B2CBF742195DCC5009AB585 /* EpisodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
