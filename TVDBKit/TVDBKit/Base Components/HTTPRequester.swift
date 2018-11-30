@@ -12,7 +12,9 @@ enum HTTP {
     }
 
     enum Error: Swift.Error {
+        case emptyResultBody
         case unknownServerError
+        case serverError(statusCode: Int, details: String?)
     }
 }
 
@@ -37,18 +39,18 @@ extension HTTPRequester {
     }
 
     func get(_ url: URL) -> Promise<Data> {
-        return sendRequest(url, requestType: .GET)
+        return request(url, requestType: .GET)
     }
 
     func patch(_ url: URL, withBody body: Data) -> Promise<Data> {
-        return sendRequest(url, requestType: .PATCH, body: body)
+        return request(url, requestType: .PATCH, body: body)
     }
 
     func post(_ url: URL, withBody body: Data) -> Promise<Data> {
-        return sendRequest(url, requestType: .POST, body: body)
+        return request(url, requestType: .POST, body: body)
     }
 
-    private func sendRequest(_ url: URL, requestType: HTTP.RequestType, body: Data? = nil) -> Promise<Data> {
+    private func request(_ url: URL, requestType: HTTP.RequestType, body: Data? = nil) -> Promise<Data> {
         var request = URLRequest(url: url)
         request.httpMethod = requestType.rawValue
         if let bodyData = body {
@@ -56,19 +58,32 @@ extension HTTPRequester {
             request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
 
+        return fetch(request).then(inspectTaskResponse)
+    }
+
+    private typealias DataTaskResponse = (Data?, URLResponse?)
+    private func fetch(_ request: URLRequest) -> Promise<DataTaskResponse> {
+        return wrap { self.session.dataTask(with: request, completionHandler: $0).resume() }
+    }
+
+    private func inspectTaskResponse(_ task: DataTaskResponse) -> Promise<Data> {
         return Promise<Data> { fullfill, reject in
-            let task = self.session.dataTask(with: request) { (maybeData, maybeResponse, maybeError) in
-                switch (maybeData, maybeError) {
-                case (let responseData?, _):
-                    fullfill(responseData)
-                case (_, let error?):
-                    reject(error)
-                default:
-                    reject(HTTP.Error.unknownServerError)
-                }
+            guard let response = task.1 as? HTTPURLResponse else { reject(HTTP.Error.unknownServerError); return }
+            guard let responseData = task.0 else { reject(HTTP.Error.emptyResultBody); return }
+
+            switch response.statusCode {
+            case 200...299:
+                fullfill(responseData)
+            default:
+                reject(HTTP.Error.serverError(statusCode: response.statusCode,
+                                              details: self.parseError(body: responseData)))
             }
-            task.resume()
         }
+    }
+
+    private func parseError(body: Data) -> String? {
+        // TODO: rcedwards Parse details out of error body
+        return String(bytes: body, encoding: .utf8)
     }
 }
 
