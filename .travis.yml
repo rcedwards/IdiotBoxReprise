@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode10.2.1
+cache: bundler
+script:
+  - bundle exec fastlane framework_tests
