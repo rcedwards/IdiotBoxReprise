@@ -3,3 +3,5 @@
 /TVDBKit/Carthage
 **/secrets.xcconfig
 .env
+/fastlane/test_output
+/fastlane/report.xml

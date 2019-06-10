@@ -48,6 +48,7 @@
 		5B281DC9218E47BD0018EEEA /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5B281DD52190854D0018EEEA /* SeriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTests.swift; sourceTree = "<group>"; };
 		5B2CBF732195DCC5009AB585 /* EpisodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTests.swift; sourceTree = "<group>"; };
+		5B409B6C22ADE2E1008713E4 /* TVDBKit_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TVDBKit_Base.xcconfig; sourceTree = "<group>"; };
 		5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		5B4367C52183B30B005FAA50 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		5B4367D52183D2EF005FAA50 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -130,6 +131,13 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		5B6216F921B1E71A0097C3E9 /* Cache Check */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cache Check";
+			sourceTree = "<group>";
+		};
 		5B8CF32F218DE715006A2D30 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +145,7 @@
 				5BF349972170FBAB001B4168 /* Info.plist */,
 				5BF349962170FBAB001B4168 /* TVDBKit.h */,
 				5B8CF334218DED46006A2D30 /* secrets.xcconfig */,
+				5B409B6C22ADE2E1008713E4 /* TVDBKit_Base.xcconfig */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 				5B8CF330218DE75D006A2D30 /* Base Components */,
 				5BE2675121948CB400EC9CB2 /* Episodes */,
 				5B281DC3218E3B190018EEEA /* Series */,
+				5B6216F921B1E71A0097C3E9 /* Cache Check */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
 				5B8CF340218DF0B2006A2D30 /* Extensions */,
 				5B8CF32F218DE715006A2D30 /* Resources */,
@@ -261,15 +271,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Robert Edwards";
 				TargetAttributes = {
 					5BF349922170FBAB001B4168 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					5BF3499B2170FBAB001B4168 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -522,14 +533,10 @@
 		};
 		5BF349A82170FBAB001B4168 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */;
+			baseConfigurationReference = 5B409B6C22ADE2E1008713E4 /* TVDBKit_Base.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,25 +550,17 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.panko.TVDBKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5BF349A92170FBAB001B4168 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */;
+			baseConfigurationReference = 5B409B6C22ADE2E1008713E4 /* TVDBKit_Base.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,11 +574,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.panko.TVDBKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -600,7 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.panko.TVDBKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -622,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.panko.TVDBKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
