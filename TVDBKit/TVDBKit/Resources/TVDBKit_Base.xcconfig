@@ -1,0 +1,15 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "secrets.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = me.panko.TVDBKit
+PRODUCT_NAME = TVDBKit
+
+SWIFT_VERSION = 5.0
+
+DYLIB_COMPATIBILITY_VERSION = 1
+DYLIB_CURRENT_VERSION = 1
+
+TARGETED_DEVICE_FAMILY = 1,2
+IPHONEOS_DEPLOYMENT_TARGET = 12.0
