@@ -18,7 +18,6 @@
 		5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5B8CF331218DE872006A2D30 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
 		5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */; };
-		5B8CF335218DED46006A2D30 /* secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5B8CF334218DED46006A2D30 /* secrets.xcconfig */; };
 		5B8CF342218DF0D0006A2D30 /* Bundle+TVDBKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */; };
 		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
 		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
@@ -271,7 +270,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Robert Edwards";
 				TargetAttributes = {
 					5BF349922170FBAB001B4168 = {
@@ -290,6 +289,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5BF349892170FBAB001B4168;
 			productRefGroup = 5BF349942170FBAB001B4168 /* Products */;
@@ -307,7 +307,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8CF335218DED46006A2D30 /* secrets.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
