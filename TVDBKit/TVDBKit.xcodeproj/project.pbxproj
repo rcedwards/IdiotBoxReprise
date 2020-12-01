@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,13 +14,9 @@
 		5B2CBF742195DCC5009AB585 /* EpisodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CBF732195DCC5009AB585 /* EpisodeTests.swift */; };
 		5B4367C42183B02E005FAA50 /* AuthenticationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */; };
 		5B4367C62183B30B005FAA50 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367C52183B30B005FAA50 /* Login.swift */; };
-		5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
-		5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5B8CF331218DE872006A2D30 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4367D52183D2EF005FAA50 /* Token.swift */; };
 		5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */; };
 		5B8CF342218DF0D0006A2D30 /* Bundle+TVDBKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */; };
-		5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DC21841893005FAA50 /* FBLPromises.framework */; };
-		5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4367DD21841893005FAA50 /* Promises.framework */; };
 		5BE267532194CA4300EC9CB2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267522194CA4300EC9CB2 /* Episode.swift */; };
 		5BE267552194CA5100EC9CB2 /* EpisodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267542194CA5100EC9CB2 /* EpisodeAPI.swift */; };
 		5BE267572194CC0600EC9CB2 /* EpisodesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE267562194CC0600EC9CB2 /* EpisodesCollection.swift */; };
@@ -29,6 +25,7 @@
 		5BF349AE2170FBDA001B4168 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AD2170FBDA001B4168 /* Endpoint.swift */; };
 		5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */; };
 		5BF349B22170FC05001B4168 /* HTTPClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349B12170FC05001B4168 /* HTTPClients.swift */; };
+		E1A365EE25758DC6005ED469 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E1A365ED25758DC6005ED469 /* Promises */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +48,6 @@
 		5B4367C32183B02E005FAA50 /* AuthenticationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAPI.swift; sourceTree = "<group>"; };
 		5B4367C52183B30B005FAA50 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		5B4367D52183D2EF005FAA50 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		5B4367DC21841893005FAA50 /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBLPromises.framework; path = Carthage/Build/iOS/FBLPromises.framework; sourceTree = "<group>"; };
-		5B4367DD21841893005FAA50 /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Promises.framework; path = Carthage/Build/iOS/Promises.framework; sourceTree = "<group>"; };
 		5B8CF334218DED46006A2D30 /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
 		5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TVDBKit.swift"; sourceTree = "<group>"; };
 		5BE267522194CA4300EC9CB2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -74,8 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4367DF21841893005FAA50 /* Promises.framework in Frameworks */,
-				5B4367DE21841893005FAA50 /* FBLPromises.framework in Frameworks */,
+				E1A365EE25758DC6005ED469 /* Promises in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,9 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDF9D482184241E00AC1CE2 /* Promises.framework in Frameworks */,
 				5BF3499D2170FBAB001B4168 /* TVDBKit.framework in Frameworks */,
-				5BDF9D472184241E00AC1CE2 /* FBLPromises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,15 +102,6 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		5B4367DB2184187C005FAA50 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				5B4367DC21841893005FAA50 /* FBLPromises.framework */,
-				5B4367DD21841893005FAA50 /* Promises.framework */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
 		5B45B63B218DE689008F0ACB /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,13 +111,6 @@
 				5BF349A12170FBAB001B4168 /* AuthenticationTests.swift */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		5B6216F921B1E71A0097C3E9 /* Cache Check */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Cache Check";
 			sourceTree = "<group>";
 		};
 		5B8CF32F218DE715006A2D30 /* Resources */ = {
@@ -181,7 +157,6 @@
 		5BF349892170FBAB001B4168 = {
 			isa = PBXGroup;
 			children = (
-				5B4367DB2184187C005FAA50 /* Dependencies */,
 				5BF349952170FBAB001B4168 /* TVDBKit */,
 				5BF349942170FBAB001B4168 /* Products */,
 			);
@@ -203,7 +178,6 @@
 				5B8CF330218DE75D006A2D30 /* Base Components */,
 				5BE2675121948CB400EC9CB2 /* Episodes */,
 				5B281DC3218E3B190018EEEA /* Series */,
-				5B6216F921B1E71A0097C3E9 /* Cache Check */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
 				5B8CF340218DF0B2006A2D30 /* Extensions */,
 				5B8CF32F218DE715006A2D30 /* Resources */,
@@ -233,13 +207,15 @@
 				5BF3498F2170FBAB001B4168 /* Sources */,
 				5BF349902170FBAB001B4168 /* Frameworks */,
 				5BF349912170FBAB001B4168 /* Resources */,
-				5B4367CC2183BBD0005FAA50 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TVDBKit;
+			packageProductDependencies = (
+				E1A365ED25758DC6005ED469 /* Promises */,
+			);
 			productName = TVDBKit;
 			productReference = 5BF349932170FBAB001B4168 /* TVDBKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -251,7 +227,6 @@
 				5BF349982170FBAB001B4168 /* Sources */,
 				5BF349992170FBAB001B4168 /* Frameworks */,
 				5BF3499A2170FBAB001B4168 /* Resources */,
-				5BDF9D492184245600AC1CE2 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -259,6 +234,8 @@
 				5BF3499F2170FBAB001B4168 /* PBXTargetDependency */,
 			);
 			name = TVDBKitTests;
+			packageProductDependencies = (
+			);
 			productName = TVDBKitTests;
 			productReference = 5BF3499C2170FBAB001B4168 /* TVDBKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -292,6 +269,9 @@
 				Base,
 			);
 			mainGroup = 5BF349892170FBAB001B4168;
+			packageReferences = (
+				E1A365EC25758DC6005ED469 /* XCRemoteSwiftPackageReference "promises" */,
+			);
 			productRefGroup = 5BF349942170FBAB001B4168 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,53 +298,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5B4367CC2183BBD0005FAA50 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FBLPromises.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Promises.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Promises.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBLPromises.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		5BDF9D492184245600AC1CE2 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FBLPromises.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Promises.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBLPromises.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Promises.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BF3498F2170FBAB001B4168 /* Sources */ = {
@@ -540,7 +473,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TVDBKit",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TVDBKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -564,7 +496,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TVDBKit",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/TVDBKit/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -582,10 +513,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = TVDBKit/Resources/Tests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -604,10 +532,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = TVDBKit/Resources/Tests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +577,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1A365EC25758DC6005ED469 /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1A365ED25758DC6005ED469 /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1A365EC25758DC6005ED469 /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BF3498A2170FBAB001B4168 /* Project object */;
 }
