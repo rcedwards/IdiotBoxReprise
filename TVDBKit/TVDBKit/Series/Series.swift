@@ -13,7 +13,7 @@ struct Series: Codable {
     }
 
     let identifier: Int
-    let network: String
+    let network: String?
     let overview: String?
     let name: String
     let slug: String
@@ -53,7 +53,7 @@ struct Series: Codable {
 
         identifier = try container.decode(Int.self, forKey: .identifier)
         name = try container.decode(String.self, forKey: .name)
-        network = try container.decode(String.self, forKey: .network)
+        network = try container.decodeIfPresent(String.self, forKey: .network)
         overview = try container.decodeIfPresent(String.self, forKey: .overview)
         slug = try container.decode(String.self, forKey: .slug)
         bannerPath = try container.decodeIfPresent(String.self, forKey: .bannerPath)

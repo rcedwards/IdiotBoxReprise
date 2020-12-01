@@ -7,7 +7,7 @@ struct Episode: Codable {
     let seasonIdentifier: Int
     let seriesIdentifier: Int
     let director: String?
-    let thumbnail: URL?
+    let thumbnailRelativePath: String?
     let lastUpdated: Date
     let writers: [String]
 
@@ -18,7 +18,7 @@ struct Episode: Codable {
         case seasonIdentifier = "airedSeasonID"
         case director
         case name = "episodeName"
-        case thumbnail = "filename"
+        case thumbnailRelativePath = "filename"
         case lastUpdated
         case overview
         case seriesIdentifier = "seriesId"

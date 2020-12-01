@@ -15,6 +15,7 @@ extension EpisodeAPI {
         let url = authenticatedHTTPClient.url(forEndpoint: endpoint)
         return authenticatedHTTPClient.get(url).then {
             let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .secondsSince1970
             return Promise(try decoder.decode(EpisodesCollection.self, from: $0))
         }
     }

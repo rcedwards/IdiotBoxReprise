@@ -7,6 +7,10 @@ class SeriesTests: XCTestCase {
     var authService: AuthenticationAPIService!
     let baseAddress = Configuration.apiBaseURL
     let login = Login()
+    
+    enum Error: Swift.Error {
+        case missingSampleFile
+    }
 
     override func setUp() {
         super.setUp()
@@ -36,5 +40,19 @@ class SeriesTests: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
-
+    
+    func testStubbedSeriesSearch() throws {
+        guard let sampleDataURL = Bundle.testBundle.url(forResource: "SampleSearchResults", withExtension: "json")
+              else { throw Error.missingSampleFile }
+        let rawData = try Data(contentsOf: sampleDataURL)
+        
+        let decoder = JSONDecoder()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        
+        let json = try decoder.decode([String: [Series]].self, from: rawData)
+        guard let series = json["data"] else { throw SeriesError.parserError }
+        XCTAssertEqual(series.count, 100)
+    }
 }

@@ -26,6 +26,9 @@
 		5BF349B02170FBF8001B4168 /* HTTPRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */; };
 		5BF349B22170FC05001B4168 /* HTTPClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF349B12170FC05001B4168 /* HTTPClients.swift */; };
 		E1A365EE25758DC6005ED469 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = E1A365ED25758DC6005ED469 /* Promises */; };
+		E1A365FC2575DB1E005ED469 /* SampleSearchResults.json in Resources */ = {isa = PBXBuildFile; fileRef = E1A365FB2575DB1E005ED469 /* SampleSearchResults.json */; };
+		E1A366072575DB9A005ED469 /* Bundle+TVDBKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A366012575DB95005ED469 /* Bundle+TVDBKitTests.swift */; };
+		E1A3660B2575DE92005ED469 /* SampleEpisodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E1A3660A2575DE92005ED469 /* SampleEpisodeResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		5BF349AD2170FBDA001B4168 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5BF349AF2170FBF8001B4168 /* HTTPRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequester.swift; sourceTree = "<group>"; };
 		5BF349B12170FC05001B4168 /* HTTPClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClients.swift; sourceTree = "<group>"; };
+		E1A365FB2575DB1E005ED469 /* SampleSearchResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleSearchResults.json; sourceTree = "<group>"; };
+		E1A366012575DB95005ED469 /* Bundle+TVDBKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TVDBKitTests.swift"; sourceTree = "<group>"; };
+		E1A3660A2575DE92005ED469 /* SampleEpisodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleEpisodeResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8CF341218DF0D0006A2D30 /* Bundle+TVDBKit.swift */,
+				E1A366012575DB95005ED469 /* Bundle+TVDBKitTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,10 +186,20 @@
 				5BE2675121948CB400EC9CB2 /* Episodes */,
 				5B281DC3218E3B190018EEEA /* Series */,
 				5B45B63B218DE689008F0ACB /* Authentication */,
+				E1A365FA2575DB05005ED469 /* Sample Responses */,
 				5B8CF340218DF0B2006A2D30 /* Extensions */,
 				5B8CF32F218DE715006A2D30 /* Resources */,
 			);
 			path = TVDBKit;
+			sourceTree = "<group>";
+		};
+		E1A365FA2575DB05005ED469 /* Sample Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E1A3660A2575DE92005ED469 /* SampleEpisodeResponse.json */,
+				E1A365FB2575DB1E005ED469 /* SampleSearchResults.json */,
+			);
+			path = "Sample Responses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +311,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A3660B2575DE92005ED469 /* SampleEpisodeResponse.json in Resources */,
+				E1A365FC2575DB1E005ED469 /* SampleSearchResults.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A366072575DB9A005ED469 /* Bundle+TVDBKitTests.swift in Sources */,
 				5B281DD62190854D0018EEEA /* SeriesTests.swift in Sources */,
 				5B8CF333218DE8F0006A2D30 /* AuthenticationTests.swift in Sources */,
 				5B2CBF742195DCC5009AB585 /* EpisodeTests.swift in Sources */,
