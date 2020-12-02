@@ -5,4 +5,5 @@ language: objective-c
 osx_image: xcode12.2
 cache: bundler
 script:
+  - echo "TVDB_API_KEY = $TVDB_API_KEY" > ./TVDBKit/TVDBKit/Resources/secrets.xcconfig
   - bundle exec fastlane framework_tests
