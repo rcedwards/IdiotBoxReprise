@@ -1,3 +1,4 @@
+[![](https://api.travis-ci.com/rcedwards/IdiotBoxReprise.svg)](https://travis-ci.com/github/rcedwards/IdiotBoxReprise)
 # IdiotBox Reprise
 
 ## TVDBKit
@@ -14,18 +15,6 @@ The file should be created at `./TVDBKit/TVDBKit/Resources/secrets.xcconfig`
 
 ```bash
 TVDB_API_KEY = YOUR_API_KEY
-```
-
-#### Carthage
-
-Install Carthage dependencies:
-
-Within the directory: `./TVDBKit` run the following:
-
-```bash
-carthage bootstrap \
-     --platform iOS \
-     --cache-builds
 ```
 
 #### Targets
