@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TMDBKit">
+   </FileRef>
+   <FileRef
       location = "group:TVDBKit/TVDBKit.xcodeproj">
    </FileRef>
 </Workspace>
